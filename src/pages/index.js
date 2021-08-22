@@ -1,5 +1,5 @@
 import { Layout } from "../components/template/LayoutIndex";
-import { MoreArticles } from "../components/organisms/MoreArticles";
+import { MoreArticles } from "../components/template/MoreArticles";
 import { getAllPostsFrontMatter } from "../lib/posts";
 
 export default function Home({ posts }) {

@@ -1,4 +1,4 @@
-import { PostPreview } from "./PostPreview";
+import { PostPreview } from "../organisms/PostPreview";
 
 export function MoreArticles({ posts }) {
   return (
