@@ -1,9 +1,7 @@
 export function Container({ children }) {
   return (
     <>
-      <div className="container mx-auto xl:max-w-screen-xl px-4">
-        {children}
-      </div>
+      <div className="max-w-7xl mx-auto my-8 px-4">{children}</div>
     </>
   );
 }
