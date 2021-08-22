@@ -15,10 +15,12 @@ function dateSortDesc(date1, date2) {
   return 0;
 }
 
+/** ファイルパスをWindows環境でも読み込める形式へ整形 */
 function filePathConvertForWindows(prefixPaths, file) {
   return file.slice(prefixPaths.length + 1).replace(/\\/g, "/");
 }
 
+/** フロントマターから必要なデータのみ抽出 */
 function convertFrontMatter(frontMatter) {
   const result = {
     slug: frontMatter.slug,
