@@ -1,11 +1,12 @@
 import { Header } from "../organisms/Header";
 import { Footer } from "../organisms/Footer";
+import { Container } from "../atoms/Container";
 
 export function Layout({ children }) {
   return (
     <>
       <Header />
-      {children}
+      <Container>{children}</Container>
       <Footer />
 
       <div className="fixed top-0 right-0 m-8 p-3 text-xs font-mono text-white h-6 w-6 rounded-full flex items-center justify-center bg-gray-700 sm:bg-pink-500 md:bg-orange-500 lg:bg-green-500 xl:bg-blue-500">
