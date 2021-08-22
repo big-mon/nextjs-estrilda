@@ -11,9 +11,9 @@ export function MoreArticles({ posts }) {
               title={post.title}
               date={post.date}
               slug={post.slug}
-              coverImage={post.image}
+              coverImage={post.coverImage}
               description={post.description}
-              category={post.categories}
+              category={post.category}
             />
           ))}
         </div>
