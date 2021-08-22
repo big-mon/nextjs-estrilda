@@ -1,6 +1,6 @@
 import { Layout } from "../components/template/LayoutIndex";
 import { MoreArticles } from "../components/organisms/MoreArticles";
-import { getAllFilesFrontMatter } from "../lib/posts";
+import { getAllPostsFrontMatter } from "../lib/posts";
 
 export default function Home({ posts }) {
   return (
@@ -13,7 +13,7 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter();
+  const posts = await getAllPostsFrontMatter();
   return {
     props: { posts },
   };

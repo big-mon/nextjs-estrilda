@@ -40,7 +40,7 @@ function dateSortDesc(date1, date2) {
 }
 
 /** 全てのフロントマター(YAMLで記載した文書情報)を取得 */
-export async function getAllFilesFrontMatter() {
+export async function getAllPostsFrontMatter() {
   const prefixPaths = path.join(root, `posts`);
   const files = getAllFilesRecursively(prefixPaths);
 
