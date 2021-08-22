@@ -1,5 +1,6 @@
 import Head from "next/head";
 import "tailwindcss/tailwind.css";
+import { SITE_NAME } from "../lib/constants";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -7,7 +8,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>{process.env.NEXT_PUBLIC_SITE_NAME}</title>
+        <title>{SITE_NAME}</title>
       </Head>
       <Component {...pageProps} />
     </>
