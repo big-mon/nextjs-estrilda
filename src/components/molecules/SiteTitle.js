@@ -8,8 +8,8 @@ export function SiteTitle() {
     <>
       <Link href="/">
         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <Logo name={SITE_NAME} />
-          <Title name={SITE_NAME} />
+          <Logo />
+          <Title />
         </a>
       </Link>
     </>
