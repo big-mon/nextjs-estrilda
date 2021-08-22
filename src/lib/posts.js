@@ -8,11 +8,6 @@ import html from "remark-html";
 const root = process.cwd();
 const postDirectoryName = `posts`;
 
-/** slugを整形 */
-function formatSlug(slug) {
-  return slug.replace(/\.md$/, "");
-}
-
 /** 日付の降順でソート */
 function dateSortDesc(date1, date2) {
   if (date1 > date2) return -1;

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Logo } from "../atoms/Logo";
 import { Title } from "../atoms/Title";
-import { SITE_NAME } from "../../lib/constants";
 
 export function SiteTitle() {
   return (
