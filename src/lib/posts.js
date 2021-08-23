@@ -2,8 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { getAllFilesRecursively } from "../lib/files";
-import remark from "remark";
-import html from "remark-html";
+import { markdownToHtml } from "./markdownToHtml";
 
 const root = process.cwd();
 const postDirectoryName = `posts`;
@@ -80,8 +79,8 @@ export async function getPostBySlug(slug) {
     })
     .filter((fm) => fm.data.slug === slug)[0];
 
-  const processedContent = await remark().use(html).process(postData.content);
-  const contentHtml = processedContent.toString();
+  // 本文をHTML変換
+  const contentHtml = await markdownToHtml(postData.content);
 
   const { data } = postData;
   return {
