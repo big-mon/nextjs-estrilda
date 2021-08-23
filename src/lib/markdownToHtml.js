@@ -1,15 +1,20 @@
 import { remark } from "remark";
-import html from "remark-html";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import remarkGfm from "remark-gfm";
 import remarkSlug from "remark-slug";
 import remarkToc from "remark-toc";
 
+/** MarkdownをHTMLへ変換 */
 export async function markdownToHtml(markdown) {
   const result = await remark()
     .use(remarkGfm)
     .use(remarkSlug)
     .use(remarkToc, { maxDepth: 2 })
-    .use(html)
+    .use(remarkRehype)
+    .use(rehypeSanitize, defaultSchema)
+    .use(rehypeStringify)
     .process(markdown);
   return result.toString();
 }
