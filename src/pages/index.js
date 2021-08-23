@@ -5,7 +5,7 @@ import { getAllPostsFrontMatter } from "../lib/posts";
 export default function Home({ posts }) {
   return (
     <>
-      <Layout>
+      <Layout home>
         <MoreArticles posts={posts} />
       </Layout>
     </>

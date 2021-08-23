@@ -2,10 +2,10 @@ import { Header } from "../organisms/Header";
 import { Footer } from "../organisms/Footer";
 import { Container } from "../atoms/Container";
 
-export function Layout({ children }) {
+export function Layout({ children, home }) {
   return (
     <>
-      <Header />
+      <Header home={home} />
       <Container>{children}</Container>
       <Footer />
 
