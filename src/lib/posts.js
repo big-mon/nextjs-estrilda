@@ -71,15 +71,19 @@ export async function getPostBySlug(slug) {
   const prefixPaths = path.join(root, postDirectoryName);
   const files = getAllFilesRecursively(prefixPaths);
 
-  const source = fs.readFileSync(files[0], "utf8");
+  // slugの一致するデータを取得
+  const postData = files
+    .map((file) => {
+      const source = fs.readFileSync(file, "utf8");
+      const frontMatter = matter(source);
+      return frontMatter;
+    })
+    .filter((fm) => fm.data.slug === slug)[0];
 
-  const frontMatter = matter(source);
-  const processedContent = await remark()
-    .use(html)
-    .process(frontMatter.content);
+  const processedContent = await remark().use(html).process(postData.content);
   const contentHtml = processedContent.toString();
 
-  const { data } = frontMatter;
+  const { data } = postData;
   return {
     ...convertFrontMatter(data),
     contentHtml: contentHtml,
