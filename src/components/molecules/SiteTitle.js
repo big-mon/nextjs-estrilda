@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "../atoms/Logo";
+import { Logo } from "./Logo";
 import { Title } from "../atoms/Title";
 
 export function SiteTitle({ home }) {

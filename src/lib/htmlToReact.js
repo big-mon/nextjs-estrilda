@@ -2,7 +2,7 @@ import React from "react";
 import { unified } from "unified";
 import rehypeParse from "rehype-parse";
 import rehypeReact from "rehype-react";
-import { CustomLink } from "../components/atoms/CustomLink";
+import { CustomLink } from "../components/molecules/CustomLink";
 
 /** 指定したタグをReactコンポーネントに変換する定義 */
 const processor = unified()
