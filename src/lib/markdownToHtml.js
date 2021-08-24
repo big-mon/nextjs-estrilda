@@ -1,4 +1,5 @@
-import { remark } from "remark";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
@@ -8,7 +9,8 @@ import remarkToc from "remark-toc";
 
 /** MarkdownをHTMLへ変換 */
 export async function markdownToHtml(markdown) {
-  const result = await remark()
+  const result = await unified()
+    .use(remarkParse)
     .use(remarkGfm)
     .use(remarkSlug)
     .use(remarkToc, { maxDepth: 2 })

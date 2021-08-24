@@ -82,6 +82,7 @@ export async function getPostBySlug(slug) {
   // 本文をHTML変換
   const contentHtml = await markdownToHtml(postData.content);
 
+  // 指定したデータ群をpropsとして返却
   const { data } = postData;
   return {
     ...convertFrontMatter(data),

@@ -1,3 +1,6 @@
+import { htmlToReact } from "../../lib/htmlToReact";
+
+/** 記事本文 */
 export function PostBody({ content }) {
-  return <div dangerouslySetInnerHTML={{ __html: content }} />;
+  return <>{htmlToReact(content)}</>;
 }
