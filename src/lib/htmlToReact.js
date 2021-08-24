@@ -2,7 +2,7 @@ import React from "react";
 import { unified } from "unified";
 import rehypeParse from "rehype-parse";
 import rehypeReact from "rehype-react";
-import Link from "next/link";
+import { CustomLink } from "../components/atoms/CustomLink";
 
 /** 指定したタグをReactコンポーネントに変換する定義 */
 const processor = unified()
@@ -10,7 +10,7 @@ const processor = unified()
   .use(rehypeReact, {
     createElement: React.createElement,
     components: {
-      a: Link,
+      a: CustomLink,
     },
   });
 
