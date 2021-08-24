@@ -6,6 +6,7 @@ import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import remarkGfm from "remark-gfm";
 import remarkSlug from "remark-slug";
 import remarkToc from "remark-toc";
+import remarkUnwrapImages from "remark-unwrap-images";
 
 /** MarkdownをHTMLへ変換 */
 export async function markdownToHtml(markdown) {
@@ -14,6 +15,7 @@ export async function markdownToHtml(markdown) {
     .use(remarkGfm)
     .use(remarkSlug)
     .use(remarkToc, { maxDepth: 2 })
+    .use(remarkUnwrapImages)
     .use(remarkRehype)
     .use(rehypeSanitize, defaultSchema)
     .use(rehypeStringify)

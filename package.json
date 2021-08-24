@@ -23,6 +23,8 @@
     "remark-rehype": "^9.0.0",
     "remark-slug": "^7.0.0",
     "remark-toc": "^8.0.0",
+    "remark-unwrap-images": "^3.0.0",
+    "sass": "^1.38.1",
     "tailwindcss": "^2.2.7",
     "unified": "^10.1.0"
   },

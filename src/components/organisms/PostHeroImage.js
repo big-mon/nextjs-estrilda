@@ -1,4 +1,4 @@
-import { HeroImage } from "../atoms/HeroImage";
+import { HeroImage } from "../molecules/HeroImage";
 
 export function PostHeroImage({ src, title }) {
   return (

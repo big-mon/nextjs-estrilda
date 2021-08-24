@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function CoverImage({ title, src, height, width }) {
+export function CoverImage({ title, src, width, height }) {
   const image = (
     <Image
       src={src}
