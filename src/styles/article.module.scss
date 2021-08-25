@@ -31,8 +31,26 @@ $breakpoints: (
     letter-spacing: 0.05em;
   }
 
-  p + p {
-    margin-top: 1.8em;
+  p {
+    & + p {
+      margin-top: 1.8em;
+    }
+
+    code {
+      font-style: italic;
+      background: #f3f4f6;
+      padding-left: 0.4em;
+      padding-right: 0.4em;
+    }
+  }
+
+  a {
+    color: #4338ca;
+    text-decoration: underline;
+
+    &:hover {
+      color: initial;
+    }
   }
 
   h1,
@@ -88,6 +106,45 @@ $breakpoints: (
 
   ol {
     list-style: decimal-leading-zero;
+  }
+
+  blockquote {
+    display: block;
+    background: #f3f4f6;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1.2em 1.2em 1em 3.4em;
+    position: relative;
+
+    /* Borders */
+    border-left: 0.4em solid #9ca3af;
+
+    &::before {
+      content: "\201C";
+
+      /*Font*/
+      font-size: 3.5em;
+      font-weight: 600;
+      color: #9ca3af;
+
+      /*Positioning*/
+      position: absolute;
+      left: 0.2em;
+      top: 0.6em;
+    }
+
+    &::after {
+      /*Reset to make sure*/
+      content: "";
+    }
+  }
+
+  pre {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1em;
+    background: #f3f4f6;
+    overflow-x: auto;
   }
 
   hr {
