@@ -154,3 +154,15 @@ $breakpoints: (
   @include mq(md) {
   }
 }
+
+.amazon {
+  a {
+    color: initial;
+    text-decoration: none;
+
+    &:hover {
+      color: #4338ca;
+      text-decoration: underline;
+    }
+  }
+}

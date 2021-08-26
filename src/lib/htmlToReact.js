@@ -4,6 +4,7 @@ import rehypeParse from "rehype-parse";
 import rehypeReact from "rehype-react";
 import { CustomLink } from "../components/molecules/CustomLink";
 import { PostImage } from "../components/molecules/PostImage";
+import { amazonBlockConvert, AmazonBlock } from "./amazonBlockConvert";
 
 /** 指定したタグをReactコンポーネントに変換する定義 */
 const processor = unified()
@@ -13,10 +14,14 @@ const processor = unified()
     components: {
       a: CustomLink,
       img: PostImage,
+      amazon: AmazonBlock,
     },
   });
 
 /** HTMLをReactコンポーネントに変換 */
 export function htmlToReact(html) {
-  return processor.processSync(html).result;
+  // 独自タグを文字列からHTMLタグに変換
+  const replaced = amazonBlockConvert(html);
+
+  return processor.processSync(replaced).result;
 }
