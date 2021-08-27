@@ -8,8 +8,7 @@ module.exports = {
   theme: {
     extend: {
       width: { 88: "22rem" },
-      maxHeight: { hero: "26rem", item: "160px" },
-      backgroundColor: { amazon: "#e47911" },
+      maxHeight: { hero: "26rem" },
     },
   },
   variants: {
