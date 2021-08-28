@@ -5,7 +5,7 @@ import rehypeReact from "rehype-react";
 import { CustomLink } from "../components/molecules/CustomLink";
 import { PostImage } from "../components/molecules/PostImage";
 import { amazonBlockConvert } from "./amazonBlockConvert";
-import { AmazonBlock } from "../components/atoms/AmazonBlock";
+import { AmazonBlock } from "../components/molecules/AmazonBlock";
 
 /** 指定したタグをReactコンポーネントに変換する定義 */
 const processor = unified()

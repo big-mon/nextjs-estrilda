@@ -1,4 +1,4 @@
-import { CopyRight } from "../molecules/CopyRight";
+import { CopyRight } from "../atoms/CopyRight";
 import { IconTwitter } from "../atoms/IconTwitter";
 import { IconGitHub } from "../atoms/IconGitHub";
 import { TWITTER, GITHUB } from "../../lib/constants";

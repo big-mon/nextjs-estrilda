@@ -1,13 +1,10 @@
 import { getPostBySlug, getAllPostsFrontMatter } from "../../lib/posts";
-import { Layout } from "../../components/template/LayoutIndex";
 import { Article } from "../../components/template/Article";
 
 export default function Page({ post, prev, next }) {
   return (
     <>
-      <Layout>
-        <Article post={post} prev={prev} next={next} />
-      </Layout>
+      <Article post={post} prev={prev} next={next} />
     </>
   );
 }

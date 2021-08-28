@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CoverImage } from "../molecules/CoverImage";
+import { CoverImage } from "../atoms/CoverImage";
 import { Date } from "../atoms/Date";
 
 export function PostPreview({

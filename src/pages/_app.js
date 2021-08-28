@@ -1,8 +1,12 @@
 import Head from "next/head";
-import "tailwindcss/tailwind.css";
+import { Header } from "../components/organisms/Header";
+import { Footer } from "../components/organisms/Footer";
+import { Container } from "../components/atoms/Container";
 import { SITE_NAME } from "../lib/constants";
+import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps }) {
+  const isHome = Component.isHome;
   return (
     <>
       <Head>
@@ -10,7 +14,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>{SITE_NAME}</title>
       </Head>
-      <Component {...pageProps} />
+
+      <Header home={isHome} />
+      <Container>
+        <Component {...pageProps} />
+      </Container>
+      <Footer />
     </>
   );
 }

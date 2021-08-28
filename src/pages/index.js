@@ -1,13 +1,10 @@
-import { Layout } from "../components/template/LayoutIndex";
 import { MoreArticles } from "../components/template/MoreArticles";
 import { getAllPostsFrontMatter } from "../lib/posts";
 
 export default function Home({ posts }) {
   return (
     <>
-      <Layout home>
-        <MoreArticles posts={posts} />
-      </Layout>
+      <MoreArticles posts={posts} />
     </>
   );
 }
@@ -18,3 +15,5 @@ export async function getStaticProps() {
     props: { posts },
   };
 }
+
+Home.isHome = true;
