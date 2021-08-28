@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-export function CoverImage({ title, src, width, height }) {
-  const image = (
+export function PreviewHero({ title, src, width, height }) {
+  return (
     <Image
       src={src}
       alt={title}
@@ -11,5 +11,4 @@ export function CoverImage({ title, src, width, height }) {
       height={height}
     />
   );
-  return <div>{image}</div>;
 }

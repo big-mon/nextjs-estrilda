@@ -1,6 +1,6 @@
 import { SITE_NAME } from "../../lib/constants";
 
-export function Title({ home }) {
+export function SiteTitle({ home }) {
   return (
     <>
       {home ? (

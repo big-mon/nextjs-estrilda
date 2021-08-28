@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CoverImage } from "../atoms/CoverImage";
+import { PreviewHero } from "../atoms/PreviewHero";
 import { Date } from "../atoms/Date";
 
 export function PostPreview({
@@ -16,7 +16,7 @@ export function PostPreview({
         <Link as={`/post/${slug}`} href="/post/[slug]">
           <a>
             <div className="flex flex-wrap content-start h-full border border-gray-200 rounded-md relative">
-              <CoverImage
+              <PreviewHero
                 title={title}
                 src={coverImage}
                 width={360}

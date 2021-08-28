@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE_NAME, AUTHOR, TWITTER } from "../../lib/constants";
+import { SITE_NAME, OWNER, TWITTER } from "../../lib/constants";
 
 export function CopyRight() {
   return (
@@ -16,7 +16,7 @@ export function CopyRight() {
           target="_blank"
           className="text-gray-600 ml-1"
         >
-          {AUTHOR}
+          {OWNER}
         </a>
       </p>
     </>
