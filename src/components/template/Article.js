@@ -5,8 +5,8 @@ import { PostBody } from "../organisms/PostBody";
 import { RelationalPost } from "../organisms/RelationalPost";
 import { SITE_NAME } from "../../lib/constants";
 
-export function Article({ post, prev, next }) {
-  const prevNext = [next, prev].filter((d) => d != null);
+export function Article({ post, relations }) {
+  const prevNext = relations.slice(0, 3);
 
   return (
     <>
