@@ -1,6 +1,7 @@
 import { PostPreview } from "../organisms/PostPreview";
+import { Pagination } from "../organisms/Pagination";
 
-export function MoreArticles({ posts }) {
+export function MoreArticles({ posts, totalPosts, currentPage }) {
   return (
     <>
       <div className="max-w-6xl mx-auto my-8 flex flex-wrap gap-y-8">
@@ -16,6 +17,8 @@ export function MoreArticles({ posts }) {
           />
         ))}
       </div>
+
+      <Pagination total={totalPosts} current={currentPage} />
     </>
   );
 }

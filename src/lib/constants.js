@@ -12,3 +12,6 @@ export const GITHUB = "big-mon";
 
 /** Amazon affiliate id */
 export const AMAZON_AFFILIATE = "d6l0g03-22";
+
+/** list articles per page */
+export const PER_PAGE = 12;
