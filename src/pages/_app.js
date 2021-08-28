@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Header } from "../components/organisms/Header";
 import { Footer } from "../components/organisms/Footer";
-import { Container } from "../components/atoms/Container";
 import { SITE_NAME } from "../lib/constants";
 import "tailwindcss/tailwind.css";
 
@@ -16,9 +15,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Header home={isHome} />
-      <Container>
-        <Component {...pageProps} />
-      </Container>
+      <Component {...pageProps} />
       <Footer />
     </>
   );

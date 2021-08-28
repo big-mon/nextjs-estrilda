@@ -2,9 +2,12 @@ import Head from "next/head";
 import { PostHeader } from "../organisms/PostHeader";
 import { PostHeroImage } from "../organisms/PostHeroImage";
 import { PostBody } from "../organisms/PostBody";
+import { RelationalPost } from "../organisms/RelationalPost";
 import { SITE_NAME } from "../../lib/constants";
 
 export function Article({ post, prev, next }) {
+  const prevNext = [next, prev].filter((d) => d != null);
+
   return (
     <>
       <Head>
@@ -12,7 +15,8 @@ export function Article({ post, prev, next }) {
           {post.title} | {SITE_NAME}
         </title>
       </Head>
-      <article className="max-w-5xl mx-auto px-6">
+
+      <article className="max-w-5xl mx-auto my-8 px-6">
         <PostHeader
           title={post.title}
           category={post.category}
@@ -21,6 +25,8 @@ export function Article({ post, prev, next }) {
         <PostHeroImage src={post.coverImage} title={post.title} />
         <PostBody content={post.contentHtml} />
       </article>
+
+      <RelationalPost posts={prevNext} />
     </>
   );
 }

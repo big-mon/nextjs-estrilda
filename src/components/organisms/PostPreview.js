@@ -12,7 +12,7 @@ export function PostPreview({
 }) {
   return (
     <>
-      <article className="mx-auto mb-8 w-88 group hover:text-blue-800">
+      <article className="mx-auto w-88 bg-white group hover:text-blue-800">
         <Link as={`/post/${slug}`} href="/post/[slug]">
           <a>
             <div className="flex flex-wrap content-start h-full border border-gray-200 rounded-md relative">
