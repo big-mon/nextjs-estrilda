@@ -1,4 +1,8 @@
-module.exports = {
+const withTM = require("next-transpile-modules")([
+  "@big-mon/react-component-amazon",
+]);
+
+module.exports = withTM({
   reactStrictMode: true,
   images: {
     domains: ["res.cloudinary.com", "images-na.ssl-images-amazon.com"],
@@ -8,4 +12,4 @@ module.exports = {
 
     return config;
   },
-};
+});
