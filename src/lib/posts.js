@@ -90,7 +90,24 @@ export async function getPostBySlug(slug) {
   };
 }
 
-/** 特定のカテゴリーを含む記事数を取得 */
-export function countCategoryPosts(cat) {
-  return getAllPostsFrontMatter().filter((p) => p.category == cat).length;
+/** categoryから記事を取得(本文なし) */
+export function getCategoryPosts(category, posts) {
+  const allPosts = posts ? posts : getAllPostsFrontMatter();
+  const filteredPosts = allPosts
+    .filter((p) => p.category)
+    .filter((p) => p.category.toLowerCase() == category.toLowerCase());
+
+  return filteredPosts;
+}
+
+/** tagから記事を取得(本文なし) */
+export function getTagPosts(tag, posts) {
+  const allPosts = posts ? posts : getAllPostsFrontMatter();
+  const filteredPosts = allPosts
+    .filter((p) => p.tags && p.tags.length > 0)
+    .filter((p) =>
+      p.tags.map((t) => t.toLowerCase()).includes(tag.toLowerCase())
+    );
+
+  return filteredPosts;
 }

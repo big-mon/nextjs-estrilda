@@ -1,15 +1,15 @@
 import { MoreArticles } from "../../components/template/MoreArticles";
-import { getAllPostsFrontMatter, countCategoryPosts } from "../../lib/posts";
+import { getAllPostsFrontMatter, getTagPosts } from "../../lib/posts";
 import { PER_PAGE } from "../../lib/constants";
 
-export default function Page({ posts, totalPosts, currentPage, category }) {
+export default function Page({ posts, totalPosts, currentPage, tags }) {
   return (
     <>
       <MoreArticles
         posts={posts}
         totalPosts={totalPosts}
         currentPage={currentPage}
-        category={category}
+        tags={tags}
       />
     </>
   );
@@ -19,21 +19,20 @@ export default function Page({ posts, totalPosts, currentPage, category }) {
 export function getStaticProps({ params }) {
   const { slug } = params;
 
-  const allPosts = getAllPostsFrontMatter();
+  // ページ番号とタグを取得
   const page = slug[1] ?? 1;
-  const category = slug[0] ?? "";
+  const tag = (slug[0] ?? "").toLowerCase();
 
-  const filteredPosts = allPosts.filter(
-    (p) => p.category.toLowerCase() == category.toLowerCase()
-  );
-  const posts = filteredPosts.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+  // 本ページで描画する記事を取得
+  const tagPosts = getTagPosts(tag);
+  const posts = tagPosts.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   return {
     props: {
       posts,
-      totalPosts: filteredPosts.length,
+      totalPosts: tagPosts.length,
       currentPage: page,
-      category,
+      tags: tag,
     },
   };
 }
@@ -41,19 +40,19 @@ export function getStaticProps({ params }) {
 /** 動的なルーティング対象の一覧を定義 */
 export function getStaticPaths() {
   const posts = getAllPostsFrontMatter();
-  const categories = Array.from(
-    new Set(posts.map((p) => p.category).filter((p) => p != ""))
+  const tags = Array.from(
+    new Set(posts.flatMap((p) => p.tags).filter((p) => p != ""))
   );
 
-  const paths = categories.flatMap((cat) => {
-    const pages = Math.ceil(countCategoryPosts(cat) / PER_PAGE);
+  const paths = tags.flatMap((tag) => {
+    const pages = Math.ceil(getTagPosts(tag, posts).length / PER_PAGE);
     return Array.from(Array(pages).keys()).map((page) =>
       page === 0
         ? {
-            params: { slug: [cat, (page + 1).toString()] },
+            params: { slug: [tag.toLowerCase(), (page + 1).toString()] },
           }
         : {
-            params: { slug: [cat, (page + 1).toString()] },
+            params: { slug: [tag.toLowerCase(), (page + 1).toString()] },
           }
     );
   });
