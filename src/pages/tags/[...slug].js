@@ -62,5 +62,3 @@ export function getStaticPaths() {
     fallback: false,
   };
 }
-
-Page.isHome = true;
