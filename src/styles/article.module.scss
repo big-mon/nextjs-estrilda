@@ -18,6 +18,7 @@ $breakpoints: (
   h3,
   h4,
   h5,
+  h6,
   table,
   blockquote,
   ul,
@@ -68,7 +69,8 @@ $breakpoints: (
   }
 
   h4,
-  h5 {
+  h5,
+  h6 {
     font-size: 1.1em;
     font-weight: 600;
     margin: 1.8em auto 0.6em;
