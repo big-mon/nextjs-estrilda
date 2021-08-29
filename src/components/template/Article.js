@@ -2,6 +2,7 @@ import Head from "next/head";
 import { PostHeader } from "../organisms/PostHeader";
 import { PostHeroImage } from "../organisms/PostHeroImage";
 import { PostBody } from "../organisms/PostBody";
+import { UnorderedTagsList } from "../organisms/UnorderedTagsList";
 import { RelationalPost } from "../organisms/RelationalPost";
 import { SITE_NAME } from "../../lib/constants";
 
@@ -24,6 +25,7 @@ export function Article({ post, relations }) {
         />
         <PostHeroImage src={post.coverImage} title={post.title} />
         <PostBody content={post.contentHtml} />
+        <UnorderedTagsList tags={post.tags} />
       </article>
 
       <RelationalPost posts={prevNext} />
