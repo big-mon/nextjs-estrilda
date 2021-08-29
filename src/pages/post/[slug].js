@@ -1,5 +1,6 @@
 import { getPostBySlug, getAllPostsFrontMatter } from "../../lib/posts";
 import { Article } from "../../components/template/Article";
+import { SEO } from "../../components/organisms/SEO";
 
 export default function Page({
   post,
@@ -15,6 +16,8 @@ export default function Page({
   );
   return (
     <>
+      <SEO post={post} />
+
       <Article post={post} relations={relations} />
     </>
   );

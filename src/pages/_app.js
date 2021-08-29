@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>{SITE_NAME}</title>
       </Head>
 
       <Header home={isHome} />

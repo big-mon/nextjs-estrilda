@@ -1,10 +1,14 @@
 import { MoreArticles } from "../../components/template/MoreArticles";
 import { getAllPostsFrontMatter, getTagPosts } from "../../lib/posts";
 import { PER_PAGE } from "../../lib/constants";
+import { SEO } from "../../components/organisms/SEO";
+import Head from "next/head";
 
 export default function Page({ posts, totalPosts, currentPage, tags }) {
   return (
     <>
+      <SEO tag={tags} />
+
       <MoreArticles
         posts={posts}
         totalPosts={totalPosts}
