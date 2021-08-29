@@ -23,7 +23,9 @@ export function getStaticProps({ params }) {
   const page = slug[1] ?? 1;
   const category = slug[0] ?? "";
 
-  const filteredPosts = allPosts.filter((p) => p.category == category);
+  const filteredPosts = allPosts.filter(
+    (p) => p.category.toLowerCase() == category.toLowerCase()
+  );
   const posts = filteredPosts.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   return {
