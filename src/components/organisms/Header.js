@@ -1,4 +1,5 @@
 import { HeaderTitle } from "../molecules/HeaderTitle";
+import Link from "next/link";
 
 export function Header({ home }) {
   return (
@@ -8,7 +9,9 @@ export function Header({ home }) {
           <HeaderTitle home={home} />
 
           <nav className="md:ml-auto hidden sm:flex flex-wrap items-center text-base justify-center">
-            <a className="mr-5 hover:text-gray-900">First Link</a>
+            <Link href="/post/about">
+              <a className="mr-5 hover:text-gray-900">About</a>
+            </Link>
             <a className="mr-5 hover:text-gray-900">Second Link</a>
             <a className="mr-5 hover:text-gray-900">Third Link</a>
             <a className="mr-5 hover:text-gray-900">Fourth Link</a>
