@@ -1,4 +1,6 @@
 # nextjs-estrilda
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbig-mon%2Fnextjs-estrilda.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbig-mon%2Fnextjs-estrilda?ref=badge_shield)
+
 
 Estrilda is a simple blog theme for **`Next.js`**.
 
@@ -42,3 +44,7 @@ image: image-url
 category: CATEGORY
 tags: ["TAG", "TAG"]
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbig-mon%2Fnextjs-estrilda.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbig-mon%2Fnextjs-estrilda?ref=badge_large)
