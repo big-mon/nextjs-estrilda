@@ -2,6 +2,8 @@
 
 Estrilda is a simple blog theme for **`Next.js`**.
 
+[DEMO](https://nextjs-estrilda.vercel.app/)
+
 **features:**
 
 - Responsive design
