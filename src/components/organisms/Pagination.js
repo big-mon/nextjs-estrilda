@@ -7,12 +7,12 @@ export function Pagination({ total, current, category, tag }) {
   const hasPrev = current - 1 > 0;
   const hasNext = totalPage - current > 0;
 
-  const isAll = !category && !tag;
-  const baseHref = isAll
-    ? "page"
-    : category
-    ? `categories/${category}`
-    : `tags/${tag}`;
+  let baseHref = "page";
+  if (category) {
+    baseHref = `categories/${category}`;
+  } else if (tag) {
+    baseHref = `tags/${tag}`;
+  }
 
   return (
     <div className="max-w-6xl mx-auto text-right px-6">
