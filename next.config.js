@@ -5,7 +5,7 @@ const withTM = require("next-transpile-modules")([
 module.exports = withTM({
   reactStrictMode: true,
   images: {
-    domains: ["res.cloudinary.com", "images-na.ssl-images-amazon.com"],
+    domains: ["res.cloudinary.com"],
   },
   webpack: (config) => {
     config.resolve.fallback = { fs: false, path: false };
