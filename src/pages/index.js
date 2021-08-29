@@ -10,8 +10,8 @@ export default function Home({ posts, totalPosts }) {
   );
 }
 
-export async function getStaticProps() {
-  const allPosts = await getAllPostsFrontMatter();
+export function getStaticProps() {
+  const allPosts = getAllPostsFrontMatter();
   const posts = allPosts.slice(0, PER_PAGE);
 
   return {

@@ -15,8 +15,8 @@ export default function Page({ posts, totalPosts, currentPage }) {
 }
 
 /** ビルド時の静的生成 */
-export async function getStaticProps({ params }) {
-  const allPosts = await getAllPostsFrontMatter();
+export function getStaticProps({ params }) {
+  const allPosts = getAllPostsFrontMatter();
   const page = params.page;
   const posts = allPosts.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
@@ -26,8 +26,8 @@ export async function getStaticProps({ params }) {
 }
 
 /** 動的なルーティング対象の一覧を定義 */
-export async function getStaticPaths() {
-  const posts = await getAllPostsFrontMatter();
+export function getStaticPaths() {
+  const posts = getAllPostsFrontMatter();
 
   const range = (start, end) =>
     [...Array(end - start + 1)].map((_, i) => start + i);

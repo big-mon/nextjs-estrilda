@@ -22,7 +22,7 @@ export default function Page({
 
 /** ビルド時の静的生成 */
 export async function getStaticProps({ params }) {
-  const allPosts = await getAllPostsFrontMatter();
+  const allPosts = getAllPostsFrontMatter();
   const postIndex = allPosts.findIndex((post) => post.slug === params.slug);
   const prev1 = allPosts[postIndex + 1] || null;
   const prev2 = allPosts[postIndex + 2] || null;
@@ -36,8 +36,8 @@ export async function getStaticProps({ params }) {
 }
 
 /** 動的なルーティング対象の一覧を定義 */
-export async function getStaticPaths() {
-  const posts = await getAllPostsFrontMatter();
+export function getStaticPaths() {
+  const posts = getAllPostsFrontMatter();
   return {
     paths: posts.map((p) => ({
       params: { slug: p.slug },

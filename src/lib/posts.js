@@ -28,14 +28,14 @@ function convertFrontMatter(frontMatter) {
     description: frontMatter.description ?? "",
     author: frontMatter.author ?? "",
     coverImage: frontMatter.image ?? "",
-    category: frontMatter.categories ?? [],
+    category: frontMatter.category ?? "",
     tags: frontMatter.tags ?? [],
   };
   return result;
 }
 
 /** 全てのフロントマター(YAMLで記載した文書情報)を取得 */
-export async function getAllPostsFrontMatter() {
+export function getAllPostsFrontMatter() {
   const prefixPaths = path.join(root, postDirectoryName);
   const files = getAllFilesRecursively(prefixPaths);
 
@@ -88,4 +88,9 @@ export async function getPostBySlug(slug) {
     ...convertFrontMatter(data),
     contentHtml: contentHtml,
   };
+}
+
+/** 特定のカテゴリーを含む記事数を取得 */
+export function countCategoryPosts(cat) {
+  return getAllPostsFrontMatter().filter((p) => p.category == cat).length;
 }
