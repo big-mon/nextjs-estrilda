@@ -1,5 +1,4 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://estrilda.damonge.com",
+  siteUrl: process.env.SITE_URL || "https://example.com",
   generateRobotsTxt: true,
-  outDir: "./out",
 };
