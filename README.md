@@ -1,6 +1,6 @@
 # nextjs-estrilda
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbig-mon%2Fnextjs-estrilda.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbig-mon%2Fnextjs-estrilda?ref=badge_shield)
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbig-mon%2Fnextjs-estrilda.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbig-mon%2Fnextjs-estrilda?ref=badge_shield)
 
 Estrilda is a simple blog theme for **`Next.js`**.
 
@@ -11,6 +11,7 @@ Estrilda is a simple blog theme for **`Next.js`**.
 - Responsive design
 - Support Markdown (gfm)
 - Based Tailwind CSS
+- Based TypeScript
 - Category, Tags
 - Amazon.co.jp Affiliate
 
@@ -18,13 +19,12 @@ Estrilda is a simple blog theme for **`Next.js`**.
 
 ```bash
 git clone https://github.com/big-mon/nextjs-estrilda --depth=1
-
 yarn
 ```
 
 ### configuration
 
-config file `src/lib/constants.js`. need optimize your environment.
+config file `src/lib/constants.ts`. need optimize your environment.
 
 ### run your website
 
@@ -45,6 +45,6 @@ category: CATEGORY
 tags: ["TAG", "TAG"]
 ```
 
-
 ## License
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbig-mon%2Fnextjs-estrilda.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbig-mon%2Fnextjs-estrilda?ref=badge_large)
