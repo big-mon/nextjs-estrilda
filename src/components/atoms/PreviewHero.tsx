@@ -18,6 +18,7 @@ export const PreviewHero = ({ title, src, width, height }: Props) => {
           objectFit="cover"
           width={width}
           height={height}
+          quality={55}
         />
       ) : (
         <></>
