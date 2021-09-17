@@ -15,6 +15,8 @@ export function HeroImage({ title, src }: Props) {
           width={1024}
           height={424}
           objectFit="cover"
+          priority={false}
+          quality={65}
         />
       ) : (
         <></>

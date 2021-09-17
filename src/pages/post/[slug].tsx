@@ -28,6 +28,7 @@ export const Page = ({
   return (
     <>
       <SEO post={post} />
+
       <Article post={post} relations={relations} />
     </>
   );

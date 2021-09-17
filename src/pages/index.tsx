@@ -14,6 +14,7 @@ export const Home = ({ posts, totalPosts }: Props) => {
   return (
     <>
       <SEO />
+
       <MoreArticles posts={posts} totalPosts={totalPosts} currentPage={1} />
     </>
   );
