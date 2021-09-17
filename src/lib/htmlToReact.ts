@@ -10,7 +10,6 @@ import { AmazonItem } from "../components/organisms/AmazonItem";
 /** 指定したタグをReactコンポーネントに変換する定義 */
 const processor = unified()
   .use(rehypeParse, { fragment: true })
-  // @ts-expect-error ts-migrate(2345) FIXME: Argument of type '[{ createElement: { (type: "inpu... Remove this comment to see the full error message
   .use(rehypeReact, {
     createElement: React.createElement,
     components: {
