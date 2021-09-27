@@ -145,4 +145,16 @@
   hr {
     margin: 3em auto;
   }
+
+  figure {
+    > div {
+      position: unset !important;
+    }
+
+    img {
+      position: relative !important;
+      height: unset !important;
+      max-height: 556px !important;
+    }
+  }
 }
