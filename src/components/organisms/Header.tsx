@@ -8,7 +8,7 @@ type Props = {
 export const Header = ({ home }: Props) => {
   return (
     <>
-      <header className="text-gray-600">
+      <header className="max-w-7xl mx-auto text-gray-600">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <HeaderTitle home={home} />
 

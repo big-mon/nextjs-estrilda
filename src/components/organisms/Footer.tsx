@@ -6,8 +6,8 @@ import { TWITTER, GITHUB } from "../../lib/constants";
 export const Footer = () => {
   return (
     <>
-      <footer className="text-gray-600 body-font">
-        <div className="container px-8 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <footer className="max-w-6xl mx-auto text-gray-600 body-font">
+        <div className="container px-8 pt-16 pb-8 mx-auto flex items-center sm:flex-row flex-col">
           <CopyRight />
 
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
