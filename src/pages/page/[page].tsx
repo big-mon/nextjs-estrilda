@@ -3,6 +3,7 @@ import { getAllPostsFrontMatter } from "../../lib/posts";
 import { PER_PAGE } from "../../lib/constants";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { PostData } from "../../models/Post";
+import { SEO } from "../../components/organisms/SEO";
 
 type Props = {
   posts: PostData[];
@@ -13,6 +14,8 @@ type Props = {
 export const Page = ({ posts, totalPosts, currentPage }: Props) => {
   return (
     <>
+      <SEO />
+
       <MoreArticles
         posts={posts}
         totalPosts={totalPosts}

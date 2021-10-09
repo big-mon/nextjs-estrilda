@@ -10,8 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@big-mon/react-component-amazon": "^1.0.5",
-    "date-fns": "^2.24.0",
+    "@big-mon/react-component-amazon": "^1.0.6",
+    "date-fns": "^2.25.0",
     "gray-matter": "^4.0.3",
     "next": "11.1.2",
     "next-transpile-modules": "^8.0.0",
@@ -22,22 +22,22 @@
     "rehype-react": "^7.0.2",
     "rehype-sanitize": "^5.0.0",
     "rehype-stringify": "^9.0.2",
-    "remark-gfm": "^2.0.0",
+    "remark-gfm": "^3.0.0",
     "remark-parse": "^10.0.0",
-    "remark-rehype": "^9.0.0",
+    "remark-rehype": "^10.0.0",
     "remark-unwrap-images": "^3.0.0",
-    "sass": "^1.41.1",
-    "tailwindcss": "^2.2.15",
+    "sass": "^1.42.1",
+    "tailwindcss": "^2.2.16",
     "unified": "^10.1.0"
   },
   "devDependencies": {
-    "@types/node": "^16.9.2",
-    "@types/react": "^17.0.21",
-    "autoprefixer": "^10.3.4",
+    "@types/node": "^16.10.3",
+    "@types/react": "^17.0.27",
+    "autoprefixer": "^10.3.7",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
-    "next-sitemap": "^1.6.168",
-    "postcss": "^8.3.6",
+    "next-sitemap": "^1.6.179",
+    "postcss": "^8.3.9",
     "typescript": "^4.4.3"
   }
 }
