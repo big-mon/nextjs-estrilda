@@ -4,7 +4,7 @@ description: Quo usque tandem abutere, Catilina, patientia nostra?
 slug: lorem-ipsum
 date: 2021-01-01
 author: Mon
-image: https://res.cloudinary.com/damonge/image/upload/t_featured,f_auto/Hero/pexels-pixabay-34704_pg3ekk.jpg
+image: https://res.cloudinary.com/damonge/image/upload/f_auto,q_auto,fl_progressive,c_fill,h_288,w_494/Hero/pexels-pixabay-34704_pg3ekk.jpg
 category: dummyCategory1
 tags: ["dummyTag1"]
 ---

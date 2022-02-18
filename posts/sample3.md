@@ -4,7 +4,7 @@ description: Quam diu etiam furor iste tuus nos eludet?
 slug: lorem-ipsum3
 date: 2021-01-02
 author: Mon
-image: https://res.cloudinary.com/damonge/image/upload/t_featured,f_auto/Hero/YS4_5968_69_70-2-3_x9dlrp.jpg
+image: https://res.cloudinary.com/damonge/image/upload/f_auto,q_auto,fl_progressive,c_fill,h_288,w_494/Hero/YS4_5968_69_70-2-3_x9dlrp.jpg
 category: dummyCategory2
 tags: ["dummyTag1", "dummyTag2"]
 ---
