@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { getAllFilesRecursively } from "../lib/files";
-import { markdownToHtml } from "./markdownToHtml";
 import { PostData, FullPostData, PostTag, PostCategory } from "../models/Post";
 
 const root = process.cwd();
@@ -92,14 +91,11 @@ export const getPostBySlug = async (slug: string): Promise<FullPostData> => {
     })
     .filter((fm: any) => fm.data.slug === slug)[0];
 
-  // 本文をHTML変換
-  const contentHtml = await markdownToHtml(postData.content);
-
   // 指定したデータ群をpropsとして返却
   const { data } = postData;
   return {
     ...convertFrontMatter(data),
-    contentHtml: contentHtml,
+    contentHtml: postData.content,
   };
 };
 
