@@ -1,7 +1,7 @@
-import { CopyRight } from "../atoms/CopyRight";
-import { IconTwitter } from "../atoms/IconTwitter";
-import { IconGitHub } from "../atoms/IconGitHub";
-import { TWITTER, GITHUB } from "../../lib/constants";
+import { CopyRight } from "components/atoms/CopyRight";
+import { IconTwitter } from "components/atoms/IconTwitter";
+import { IconGitHub } from "components/atoms/IconGitHub";
+import { TWITTER, GITHUB } from "lib/constants";
 
 export const Footer = () => {
   return (

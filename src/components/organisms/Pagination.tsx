@@ -1,6 +1,6 @@
-import { PageButton } from "../atoms/PageButton";
-import { PER_PAGE } from "../../lib/constants";
-import { PostCategory, PostTag } from "../../models/Post";
+import { PageButton } from "components/atoms/PageButton";
+import { PER_PAGE } from "lib/constants";
+import { PostCategory, PostTag } from "models/Post";
 
 type Props = {
   total: number;

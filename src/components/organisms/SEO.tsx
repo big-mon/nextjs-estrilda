@@ -6,8 +6,8 @@ import {
   SITE_IMAGE,
   TWITTER,
   OWNER,
-} from "../../lib/constants";
-import { PostData, PostCategory, PostTag } from "../../models/Post";
+} from "lib/constants";
+import { PostData, PostCategory, PostTag } from "models/Post";
 
 type Props = {
   post?: PostData;

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PostCategory } from "../../models/Post";
+import { PostCategory } from "models/Post";
 
 type Props = {
   name: PostCategory;

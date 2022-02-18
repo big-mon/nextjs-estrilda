@@ -1,6 +1,6 @@
-import { Date } from "../atoms/Date";
-import { LinkCategory } from "../molecules/LinkCategory";
-import { PostData } from "../../models/Post";
+import { Date } from "components/atoms/Date";
+import { LinkCategory } from "components/molecules/LinkCategory";
+import { PostData } from "models/Post";
 
 type Props = {
   title: PostData["title"];

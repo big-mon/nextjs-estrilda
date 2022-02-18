@@ -1,6 +1,6 @@
 import { AmazonBlock } from "@big-mon/react-component-amazon";
-import { AMAZON_AFFILIATE } from "../../lib/constants";
-import styles from "../../styles/amazon.module.scss";
+import { AMAZON_AFFILIATE } from "lib/constants";
+import styles from "styles/amazon.module.scss";
 
 type Props = {
   asin: string;

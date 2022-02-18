@@ -1,5 +1,5 @@
-import { ListTag } from "../molecules/ListTag";
-import { PostTag } from "../../models/Post";
+import { ListTag } from "components/molecules/ListTag";
+import { PostTag } from "models/Post";
 
 type Props = {
   tags?: PostTag[];

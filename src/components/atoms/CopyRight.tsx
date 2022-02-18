@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE_NAME, OWNER, TWITTER } from "../../lib/constants";
+import { SITE_NAME, OWNER, TWITTER } from "lib/constants";
 
 export const CopyRight = () => {
   return (

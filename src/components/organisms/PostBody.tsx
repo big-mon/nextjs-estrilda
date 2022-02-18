@@ -1,6 +1,6 @@
-import styles from "../../styles/article.module.scss";
+import styles from "styles/article.module.scss";
 import "highlight.js/styles/github-dark.css";
-import { FullPostData } from "../../models/Post";
+import { FullPostData } from "models/Post";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";

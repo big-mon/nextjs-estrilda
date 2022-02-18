@@ -1,4 +1,4 @@
-import { HeaderTitle } from "../molecules/HeaderTitle";
+import { HeaderTitle } from "components/molecules/HeaderTitle";
 import Link from "next/link";
 
 type Props = {

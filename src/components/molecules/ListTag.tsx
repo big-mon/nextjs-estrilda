@@ -1,5 +1,5 @@
-import { Tag } from "../atoms/Tag";
-import { PostTag } from "../../models/Post";
+import { Tag } from "components/atoms/Tag";
+import { PostTag } from "models/Post";
 
 type Props = {
   name: PostTag;

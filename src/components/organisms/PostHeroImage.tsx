@@ -1,4 +1,4 @@
-import { HeroImage } from "../molecules/HeroImage";
+import { HeroImage } from "components/molecules/HeroImage";
 
 type Props = {
   src: string;

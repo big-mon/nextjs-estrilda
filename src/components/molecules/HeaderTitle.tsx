@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { IconLogo } from "../atoms/IconLogo";
-import { SiteTitle } from "../atoms/SiteTitle";
+import { IconLogo } from "components/atoms/IconLogo";
+import { SiteTitle } from "components/atoms/SiteTitle";
 
 type Props = {
   home: Boolean;

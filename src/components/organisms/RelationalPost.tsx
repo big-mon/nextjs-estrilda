@@ -1,5 +1,5 @@
 import { PostPreview } from "./PostPreview";
-import { PostData } from "../../models/Post";
+import { PostData } from "models/Post";
 
 type Props = {
   posts: PostData[];

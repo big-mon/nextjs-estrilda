@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { PreviewHero } from "../atoms/PreviewHero";
-import { Date } from "../atoms/Date";
-import { PostData } from "../../models/Post";
+import { PreviewHero } from "components/atoms/PreviewHero";
+import { Date } from "components/atoms/Date";
+import { PostData } from "models/Post";
 
 export const PostPreview = ({
   title,
