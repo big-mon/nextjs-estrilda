@@ -9,9 +9,7 @@ type Props = {
 export const Tag = ({ name, children }: Props) => {
   return (
     <>
-      <Link href={`/tags/${name.tag.toLowerCase()}/1`}>
-        <a>#{children}</a>
-      </Link>
+      <Link href={`/tags/${name.tag.toLowerCase()}/1`}>#{children}</Link>
     </>
   );
 };

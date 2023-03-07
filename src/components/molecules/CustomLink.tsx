@@ -12,11 +12,7 @@ const CustomLink = ({ href = "/", children = "", className = "" }: Props) => {
   const isAnchor = href && href.startsWith("#");
 
   if (isInternal) {
-    return (
-      <Link href={href}>
-        <a>{children}</a>
-      </Link>
-    );
+    return <Link href={href}>{children}</Link>;
   }
 
   if (isAnchor) {

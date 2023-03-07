@@ -12,16 +12,17 @@ export function HeroImage({ title, src }: Props) {
         <Image
           src={src}
           alt={title}
-          width={1024}
-          height={424}
-          objectFit="cover"
           priority={false}
           quality={65}
+          fill
+          className="object-contain"
         />
       ) : (
         <></>
       )}
     </>
   );
-  return <div className="max-h-hero mx-auto">{image}</div>;
+  return (
+    <div className="max-h-hero mx-auto relative aspect-video">{image}</div>
+  );
 }

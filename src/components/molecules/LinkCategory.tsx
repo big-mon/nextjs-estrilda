@@ -13,8 +13,11 @@ export function LinkCategory({ name }: Props) {
       {text == "" ? (
         <></>
       ) : (
-        <Link href={`/categories/${text.toLowerCase()}/1`}>
-          <a className="hover:text-blue-800">{text}</a>
+        <Link
+          href={`/categories/${text.toLowerCase()}/1`}
+          className="hover:text-blue-800"
+        >
+          {text}
         </Link>
       )}
     </>

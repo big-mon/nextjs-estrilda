@@ -13,17 +13,17 @@ export const Header = ({ home }: Props) => {
           <HeaderTitle home={home} />
 
           <nav className="md:ml-auto hidden sm:flex flex-wrap items-center text-base justify-center">
-            <Link href="/post/about">
-              <a className="mr-5 hover:text-gray-900">About</a>
+            <Link href="/post/about" className="mr-5 hover:text-gray-900">
+              About
             </Link>
-            <Link href="/">
-              <a className="mr-5 hover:text-gray-900">Second Link</a>
+            <Link href="/" className="mr-5 hover:text-gray-900">
+              Second Link
             </Link>
-            <Link href="/">
-              <a className="mr-5 hover:text-gray-900">Third Link</a>
+            <Link href="/" className="mr-5 hover:text-gray-900">
+              Third Link
             </Link>
-            <Link href="/">
-              <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+            <Link href="/" className="mr-5 hover:text-gray-900">
+              Fourth Link
             </Link>
           </nav>
         </div>

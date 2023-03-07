@@ -9,11 +9,12 @@ type Props = {
 export const HeaderTitle = ({ home }: Props) => {
   return (
     <>
-      <Link href="/">
-        <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <IconLogo />
-          <SiteTitle home={home} />
-        </a>
+      <Link
+        href="/"
+        className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+      >
+        <IconLogo />
+        <SiteTitle home={home} />
       </Link>
     </>
   );
