@@ -4,7 +4,7 @@ description: Theme sample blocks
 slug: example-slug
 date: 2021-02-01
 author: Mon
-image: https://res.cloudinary.com/damonge/image/upload/f_auto,q_auto,fl_progressive,c_fill,h_288,w_494/Hero/pexels-pixabay-34704_pg3ekk.jpg
+image: https://res.cloudinary.com/damonge/image/upload/t_post/Hero/pexels-pixabay-34704_pg3ekk.jpg
 category: Example
 tags: ["Markdown"]
 ---
@@ -33,7 +33,7 @@ _italic text_
 
 ###### h6
 
-![alt text](https://res.cloudinary.com/damonge/image/upload/t_postimage,f_auto/Hero/pexels-pixabay-34704_pg3ekk.jpg "caption text")
+![alt text](https://res.cloudinary.com/damonge/image/upload/t_post/Hero/pexels-pixabay-34704_pg3ekk.jpg "caption text")
 
 > Blockquotes
 > Blockquotes
