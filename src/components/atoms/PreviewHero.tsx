@@ -8,14 +8,16 @@ type Props = {
 };
 
 export const PreviewHero = ({ title, src, width, height }: Props) => {
+  const isInternal = src && !src.startsWith("http") && !src.startsWith("/");
+  const fixSrc = isInternal ? `/${src}` : src;
+
   return (
     <>
       {src ? (
         <Image
-          src={src}
+          src={fixSrc}
           alt={title}
           className="filter group-hover:brightness-50"
-          objectFit="cover"
           width={width}
           height={height}
           quality={55}
