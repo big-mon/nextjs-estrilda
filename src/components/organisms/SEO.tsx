@@ -19,7 +19,7 @@ export const SEO = ({ post, category, tag }: Props) => {
   const title = post ? `${post.title} | ${SITE_NAME}` : SITE_NAME;
   const description = post ? post.description ?? "" : SITE_DESCRIPTION;
   const ogpType = post ? "website" : "article";
-  const image = post ? post.coverImage : SITE_IMAGE;
+  const image = post ? coverImageConvert(post.coverImage) : SITE_IMAGE;
   const url =
     SITE_ROOT +
     (post
@@ -57,4 +57,10 @@ export const SEO = ({ post, category, tag }: Props) => {
       <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
     </Head>
   );
+};
+
+const coverImageConvert = (src: string) => {
+  const isInternal = src && !src.startsWith("http") && !src.startsWith("/");
+  const fixSrc = isInternal ? `/${src}` : src;
+  return fixSrc;
 };
